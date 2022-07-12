@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>form validation</title>
+        <script>
+            function validate()
+            {
+                var Username = document.getElementById("uname");
+                var password = document.getElementById("pass");
+
+                if(Username.value == "info@123" ||password.value == "info123")
+                {
+                    alert("No blank values allowed")
+                    return false;
+                }
+                else
+                {
+                    true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+        <form onsubmit="return validate()" action="wel.html">
+            <label for="">Username</label>
+            <input type="text" name="" required id="uname" placeholder="Username"><br><br>
+            <label for="">Password</label>
+            <input type="password" required id="pass" placeholder="password"/>
+            <br><br>
+            <button  type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>
